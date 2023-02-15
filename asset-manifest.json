@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Feedback-form/static/css/main.7acaea2f.css",
+    "main.js": "/Feedback-form/static/js/main.9fd483b6.js",
+    "static/media/ApercuArabicPro-Regular.woff": "/Feedback-form/static/media/ApercuArabicPro-Regular.9e5cfe7ad055bc9bb902.woff",
+    "static/media/ApercuArabicPro-Regular.woff2": "/Feedback-form/static/media/ApercuArabicPro-Regular.9454d41e9c47cdaaa6a2.woff2",
+    "index.html": "/Feedback-form/index.html",
+    "main.7acaea2f.css.map": "/Feedback-form/static/css/main.7acaea2f.css.map",
+    "main.9fd483b6.js.map": "/Feedback-form/static/js/main.9fd483b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.9fd483b6.js"
+  ]
+}
