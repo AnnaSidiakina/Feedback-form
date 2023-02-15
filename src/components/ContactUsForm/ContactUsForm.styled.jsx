@@ -8,7 +8,7 @@ export const Title = styled.h1`
   font-size: 40px;
   font-weight: 400;
   color: #3e3e3e;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 `;
 export const Form = styled.form`
   width: 557px;
