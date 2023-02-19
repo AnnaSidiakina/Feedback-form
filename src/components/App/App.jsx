@@ -3,10 +3,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ContactUsForm from 'components/ContactUsForm/ContactUsForm';
 import Footer from 'components/Footer/Footer';
-import { Container } from './App.styled';
+import { Container, Main } from './App.styled';
 export const App = () => {
   return (
-    <div>
+    <Main>
       <Container>
         <ContactUsForm />
       </Container>
@@ -24,6 +24,6 @@ export const App = () => {
         pauseOnHover
         theme="light"
       />
-    </div>
+    </Main>
   );
 };

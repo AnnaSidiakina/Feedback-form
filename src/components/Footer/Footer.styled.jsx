@@ -15,7 +15,6 @@ export const FooterContainer = styled.div`
   align-items: center;
   @media (min-width: 750px) {
     display: block;
-    max-width: 1440px;
   }
   @media (min-width: 1200px) {
     height: 200px;
