@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import {
   FormContainer,
   Input,
@@ -8,16 +9,15 @@ import {
   Title,
 } from './ContactUsForm.styled';
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addFeedback } from 'redux/slice';
+import { useDispatch } from 'react-redux';
+import { addMessage } from '../../redux/operation';
 
 const ContactUsForm = () => {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const dispatch = useDispatch();
-  const feedback = useSelector(store => store.feedback);
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -34,25 +34,23 @@ const ContactUsForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const formName = e.currentTarget.elements.name.value;
-    // const formEmail = e.currentTarget.elements.email.value;
-    // const formMessage = e.currentTarget.elements.message.value;
+
     dispatch(
-      addFeedback({
+      addMessage({
         name: name,
         email: email,
         message: message,
       })
     );
+    toast.success('Your message has been sent successfully!');
     reset();
   };
 
   function reset() {
-    setName(null);
-    setEmail(null);
-    setMessage(null);
+    setName('');
+    setEmail('');
+    setMessage('');
   }
-  console.log(feedback);
 
   return (
     <FormContainer>
@@ -61,6 +59,7 @@ const ContactUsForm = () => {
         <Input
           type="text"
           name="name"
+          value={name}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           placeholder="Your name*"
           required
@@ -69,12 +68,14 @@ const ContactUsForm = () => {
         <Input
           type="email"
           name="email"
+          value={email}
           placeholder="Your e-mail*"
           required
           onChange={handleChange}
         />
         <InputMessage
           name="message"
+          value={message}
           placeholder="Your message*"
           rows={5}
           required

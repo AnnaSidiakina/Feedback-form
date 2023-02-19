@@ -1,19 +1,29 @@
 import styled from 'styled-components';
 export const FormContainer = styled.div`
-  padding-top: 207px;
-  padding-left: 218px;
+  padding: 50px;
+  margin: 0 auto;
+
+  @media (min-width: 750px) {
+    padding-top: 170px;
+    padding-left: 150px;
+    padding-bottom: 150px;
+  }
 `;
 export const Title = styled.h1`
   font-family: 'ApercuArabicPro', sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: #3e3e3e;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 `;
 export const Form = styled.form`
-  width: 557px;
+  width: 450px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 750px) {
+    width: 557px;
+  }
 `;
 export const Input = styled.input`
   color: #2d2d2d;
@@ -41,7 +51,6 @@ export const InputMessage = styled.textarea`
   font-family: 'ApercuArabicPro', sans-serif;
   color: #2d2d2d;
   font-size: 18px;
-  height: 189px;
   padding: 31px 46px;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
@@ -77,10 +86,3 @@ export const Button = styled.button`
     transform: scale(1.1);
   }
 `;
-
-// .input::placeholder,
-// .inputMessage::placeholder {
-//   color: #2d2d2d;
-//   opacity: 1;
-//   font-size: 18px;
-// }
